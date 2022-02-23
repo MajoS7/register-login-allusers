@@ -1,0 +1,29 @@
+.formBackgroundRegister{
+    background-color: #efefdc;
+    width: 30%;
+    margin: 5% 10%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 80vh;
+}
+
+.textBox{
+    width: 60%;
+    height: 3%;
+    border: 0px;
+    border-bottom: 2px #378052 solid;
+    background-color: #efefdc;
+    padding-left: 1%;
+    outline: none;
+    font-size:large;
+}
+.desingbottom{
+    background-color: #378052;
+    color:#efefdc;
+    border: 0px;
+    border-radius: 20px;
+    width: 17vh;
+    height: 4vh;
+}

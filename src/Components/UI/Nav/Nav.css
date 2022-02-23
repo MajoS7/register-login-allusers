@@ -1,0 +1,9 @@
+.navbuttom{
+    background-color: #efefdc;
+    padding: 1.1%;
+    height: 1vh;
+    margin: 2% 2% 0% 0%;
+    border-radius: 100%;
+    display: flex;
+    align-items: center;
+}

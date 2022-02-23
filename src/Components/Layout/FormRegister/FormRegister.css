@@ -10,8 +10,6 @@
 }
 
 .textBox{
-    width: 60%;
-    height: 3%;
     border: 0px;
     border-bottom: 2px #378052 solid;
     background-color: #efefdc;
@@ -26,4 +24,11 @@
     border-radius: 20px;
     width: 17vh;
     height: 4vh;
+}
+
+.iconText{
+    display: flex;
+    width: 70%;
+    justify-content: space-evenly;
+    align-items: baseline;
 }

@@ -9,7 +9,7 @@ export const Register = () => {
   return (
     <div className='imgBackground'>
         <div className='overlay'>
-            <FormRegister/>
+            <FormRegister mensaje="Register"/>
             <Nav/>
         </div>
     </div>

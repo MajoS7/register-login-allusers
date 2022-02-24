@@ -5,24 +5,26 @@ import { BiUser } from "react-icons/bi";
 import { HiOutlineMail } from "react-icons/hi";
 import { RiLockPasswordLine } from "react-icons/ri";
 
-export const FormRegister = () => {
+export const FormRegister = ({mensaje}) => {
   const [userName, setUserName]=useState("");
   const [email, setEmail]=useState("");
   const [passaword, setPassaword]=useState("");
+  console.log(mensaje);
 
 
   const registerForm=(userName,email,passaword)=>{
-    axios.post('https://backend-edw.herokuapp.com/usuario', {
-      username:email,
-      password:passaword,
-      name:userName
-    })
-    .then(function (response) {
-      console.log(response);
-    })
-    .catch(function (error) {
-      console.log(error);
-    });
+    // axios.post('https://backend-edw.herokuapp.com/usuario', {
+    //   username:email,
+    //   password:passaword,
+    //   name:userName
+    // })
+    // .then(function (response) {
+    //   console.log(response);
+    // })
+    // .catch(function (error) {
+    //   console.log(error);
+    // });
+    console.log(userName,email,passaword)
   }
 
   return (

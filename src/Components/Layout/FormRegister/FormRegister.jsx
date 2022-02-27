@@ -8,7 +8,9 @@ import { Buttom } from '../../UI/Buttom/Buttom';
 
 
 
-export const FormRegister = ({mensaje}) => {
+
+
+export const FormRegister = () => {
   const [userName, setUserName]=useState("");
   const [email, setEmail]=useState("");
   const [passaword, setPassaword]=useState("");
@@ -16,26 +18,28 @@ export const FormRegister = ({mensaje}) => {
 
 
   const registerForm=(userName,email,passaword)=>{
-    // axios.post('https://backend-edw.herokuapp.com/usuario', {
-    //   username:email,
-    //   password:passaword,
-    //   name:userName
-    // })
-    // .then(function (response) {
-    //   console.log(response);
-    // })
-    // .catch(function (error) {
-    //   console.log(error);
-    // });
-    console.log(userName,email,passaword)
+    axios.post('https://backend-edw.herokuapp.com/usuario', {
+      username:email,
+      password:passaword,
+      name:userName
+    })
+    .then(function (response) {
+      console.log(response);
+    })
+    .catch(function (error) {
+      console.log(error);
+    });
+    
   }
 
   return (
     <div className='formBackgroundRegister'>
         <h1>Register</h1>
-        <div className='iconText'>
+        <div className="iconText">
           <BiUser/>
-          <input type="text" className='textBox' placeholder='Username' onKeyUp={event=>setUserName(event.target.value)} /></div>
+          <input type="text" className='textBox' placeholder="Username" onKeyUp={event=>setUserName(event.target.value)} />
+        </div>
+        
         <div className='iconText'>
           <HiOutlineMail/>
           <input type="email" className='textBox' placeholder='Email' onKeyUp={event=>setEmail(event.target.value)}/>
@@ -44,7 +48,7 @@ export const FormRegister = ({mensaje}) => {
           <RiLockPasswordLine/>
           <input type="password" className='textBox' placeholder='Passaword' onKeyUp={event=>setPassaword(event.target.value)}/>
         </div>
-        <Buttom prueba={registerForm} userprueba={userName} passawordprueba={passaword} emailprueba={email} />
+        <Buttom form={registerForm} nameUser={userName} passwoord={passaword} emaill={email} title="Register" />
     </div>
   )
   

@@ -4,12 +4,15 @@ import './FormRegister.css';
 import { BiUser } from "react-icons/bi";
 import { HiOutlineMail } from "react-icons/hi";
 import { RiLockPasswordLine } from "react-icons/ri";
+import { Buttom } from '../../UI/Buttom/Buttom';
+
+
 
 export const FormRegister = ({mensaje}) => {
   const [userName, setUserName]=useState("");
   const [email, setEmail]=useState("");
   const [passaword, setPassaword]=useState("");
-  console.log(mensaje);
+  
 
 
   const registerForm=(userName,email,passaword)=>{
@@ -41,7 +44,7 @@ export const FormRegister = ({mensaje}) => {
           <RiLockPasswordLine/>
           <input type="password" className='textBox' placeholder='Passaword' onKeyUp={event=>setPassaword(event.target.value)}/>
         </div>
-        <button type="submit" className='desingbottom' onClick={()=>registerForm(userName,email,passaword)}>Register</button>
+        <Buttom prueba={registerForm} userprueba={userName} passawordprueba={passaword} emailprueba={email} />
     </div>
   )
   

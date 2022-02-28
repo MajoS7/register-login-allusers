@@ -1,0 +1,40 @@
+.imgAllUser{
+    background: URL("https://cdn.pixabay.com/photo/2020/01/14/03/53/tokyo-4763976_960_720.jpg") no-repeat center center;
+    height: 100vh;
+    background-size:cover;
+}
+.user{
+    background-color: #efefdc;
+    display: flex;
+    width: 90%;
+    margin-bottom: 3%;
+    justify-content: space-between;
+    height: 8vh;
+    border-radius: 100px;
+    padding: 0% 5%;
+}
+
+.usersAll{
+    width: 40%;
+    margin: 3% 0% 1% 3%;
+    padding: 2%;
+}
+
+.scroll{
+    overflow: hidden;
+    overflow-y: auto;
+}
+
+.scroll::-webkit-scrollbar {
+    -webkit-appearance: none;
+}
+
+.scroll::-webkit-scrollbar:vertical {
+    width:8px;
+}
+
+
+.scroll::-webkit-scrollbar-thumb {
+    background-color: #797979;
+    border-radius: 20px;
+}

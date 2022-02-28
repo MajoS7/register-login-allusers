@@ -8,6 +8,7 @@ import {
   Routes,
   Route
 } from "react-router-dom";
+import { AllUsers } from './Components/Pages/AllUsers/AllUsers';
 
 
 
@@ -18,6 +19,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Login />}/>
         <Route path="/Register" element={<Register />} />
+        <Route path="/AllUsers" element={<AllUsers />} />
       </Routes>
   </BrowserRouter>
   );

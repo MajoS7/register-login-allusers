@@ -24,10 +24,10 @@ export const FormRegister = () => {
       name:userName
     })
     .then(function (response) {
-      console.log(response);
+      alert(response.data.Message);
     })
     .catch(function (error) {
-      console.log(error);
+      alert(error);
     });
     
   }
@@ -49,6 +49,7 @@ export const FormRegister = () => {
           <input type="password" className='textBox' placeholder='Passaword' onKeyUp={event=>setPassaword(event.target.value)}/>
         </div>
         <Buttom form={registerForm} nameUser={userName} passwoord={passaword} emaill={email} title="Register" />
+        
     </div>
   )
   

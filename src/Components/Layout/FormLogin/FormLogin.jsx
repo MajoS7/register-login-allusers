@@ -1,30 +1,45 @@
 import React, { useState } from 'react';
 import axios from 'axios';
-import { BiUser } from "react-icons/bi";
+import { HiOutlineMail } from "react-icons/hi";
 import { RiLockPasswordLine } from "react-icons/ri";
 import { Buttom } from '../../UI/Buttom/Buttom';
 
 export const FormLogin = () => {
-    const [userName, setUserName]=useState("");
+    const [email, setEmail]=useState("");
     const [passaword, setPassaword]=useState("");
 
     const LoginForm=(userName,email,passaword)=>{
+        axios.post('https://backend-edw.herokuapp.com/login', {
+        username:email,
+        password:passaword,
         
-        console.log(userName,email,passaword)
+        })
+        .then(function (response) {
+        if (response.data.Message=="Credenciales Invalidas"){
+           alert(response.data.Message) 
+        }
+        else{
+            alert("Usuario log")
+        }
+        
+        })
+        .catch(function (error) {
+        console.log(error);
+        });
     }
 
   return (
     <div className='formBackgroundRegister'>
         <h1>Login</h1>
-        <div className="iconText">
-          <BiUser/>
-          <input type="text" className='textBox' placeholder="Username" onKeyUp={event=>setUserName(event.target.value)} />
+        <div className='iconText'>
+          <HiOutlineMail/>
+          <input type="email" className='textBox' placeholder='Email' onKeyUp={event=>setEmail(event.target.value)}/>
         </div>
         <div className='iconText'>
           <RiLockPasswordLine/>
           <input type="password" className='textBox' placeholder='Passaword' onKeyUp={event=>setPassaword(event.target.value)}/>
         </div>
-        <Buttom form={LoginForm} nameUser={userName} passwoord={passaword} title="Login"/>
+        <Buttom form={LoginForm}  passwoord={passaword} emaill={email} title="Login"/>
     </div>
   )
 }
